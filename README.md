@@ -12,3 +12,6 @@ inspaird by the command pipline below.
 ```
 grep -B 11 'KernelPageSize:     2048 kB' /proc/22466/smaps | grep "^Size:" | awk 'BEGIN{sum=0}{sum+=$2}END{print sum/1024}'
 ```
+
+the kernel hugepage doc:
+https://www.kernel.org/doc/Documentation/vm/hugetlbpage.txt
